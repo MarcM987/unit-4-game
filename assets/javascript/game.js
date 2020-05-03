@@ -1,3 +1,5 @@
+$(document).ready
+
 var game = {
     wins: 0,
     loses: 0,
