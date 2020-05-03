@@ -16,11 +16,6 @@ function gamenum(){
 }
 gamenum();
 
-// $("#c1").on("click", function(){
-//     game.score += game.ruby;
-//     $("#snum").text(game.score);
-// });
-
 for(let i = 1; i <= 4; ++i){
     $("#c" + i).on("click", function(){
         if(game.gameset){
@@ -35,14 +30,35 @@ for(let i = 1; i <= 4; ++i){
             game.score += game.ruby;
             $("#snum").text(game.score);
         }else if(i == 2){
-            game.score += game.ruby;
+            game.score += game.diamond;
             $("#snum").text(game.score);
         }else if(i == 3){
-            game.score += game.ruby;
+            game.score += game.topaz;
             $("#snum").text(game.score);
         }else if(i == 4){
-            game.score += game.ruby;
+            game.score += game.emerald;
             $("#snum").text(game.score);
+        }
+
+        console.log("Ruby: " + game.ruby);
+        console.log("Diamond: " + game.diamond);
+        console.log("Topaz: " + game.topaz);
+        console.log("Emerald: " + game.emerald);
+
+        if(game.score == game.gnum){
+            gamenum();
+            game.gameset = true;
+            game.score = 0;
+            $("#snum").text(game.score);
+            $("#result").text("You Won!!");
+            $("#loses").text("Loses: " + game.loses);
+        }else if(game.score > game.gnum){
+            gamenum();
+            game.gameset = true;
+            game.score = 0;
+            $("#snum").text(game.score);
+            $("#result").text("You Lost!!");
+            $("#wins").text("Wins: " + game.wins);
         }
 
     });
