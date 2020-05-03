@@ -1,6 +1,6 @@
 body{
     /* display: block; */
-    background: url("assets/images/background.jpg") fixed no-repeat;
+    background: url("../images/background.jpg");
 }
 #game{
     margin: 10px;
@@ -24,6 +24,9 @@ body{
     font-size: 14px;
     font-weight: bold;
 }
+.numtot{
+    width: 6000px;
+}
 #number{
     margin: 10px;
     padding: 20px;
@@ -42,7 +45,7 @@ body{
     background-color: cyan;
     text-align: left;
     color: black;
-    font-size: 16px; 
+    font-size: 14px; 
 }
 img{
     margin: 10px;
