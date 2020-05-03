@@ -16,10 +16,35 @@ function gamenum(){
 }
 gamenum();
 
-$("#ruby").on("click", function(){
-    if(game.gameset){
-        game.ruby = Math.floor(Math.random()*12)+1;
-    }
-    $("#snum").text(game.ruby);
-});
+// $("#c1").on("click", function(){
+//     game.score += game.ruby;
+//     $("#snum").text(game.score);
+// });
+
+for(let i = 1; i <= 4; ++i){
+    $("#c" + i).on("click", function(){
+        if(game.gameset){
+            game.ruby = Math.floor(Math.random()*12)+1;
+            game.diamond = Math.floor(Math.random()*12)+1;
+            game.topaz = Math.floor(Math.random()*12)+1;
+            game.ruby = Math.floor(Math.random()*12)+1;
+            game.gameset = false;
+        }
+
+        if(i == 1){
+            game.score += game.ruby;
+            $("#snum").text(game.score);
+        }else if(i == 2){
+            game.score += game.ruby;
+            $("#snum").text(game.score);
+        }else if(i == 3){
+            game.score += game.ruby;
+            $("#snum").text(game.score);
+        }else if(i == 4){
+            game.score += game.ruby;
+            $("#snum").text(game.score);
+        }
+
+    });
+}
 
