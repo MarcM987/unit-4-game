@@ -55,6 +55,7 @@ img{
 }
 #stxt,#snum{
     margin: 20px;
+    margin-left: 10px;
     width: 300px;
     background-color: lightskyblue;
     color: white;
